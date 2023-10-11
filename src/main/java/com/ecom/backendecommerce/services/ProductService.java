@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface ProductService {
     List<Product> getAll() throws NoProductExistInRepository;
-    Product getById(Long pid) throws NoProductExistInRepository;
     Product add1(Product product);
+    Product getByID(Long pid) throws NoProductExistInRepository;
 }
