@@ -5,4 +5,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/backendecommerce-0.0.1-SNAPSHOT.jar backendecommerce.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","backendecommerce-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/Users/mrunaleepatel/seir-kale/Projects/Final/backendecommerce/target/backendecommerce-0.0.1-SNAPSHOT.jar"]
