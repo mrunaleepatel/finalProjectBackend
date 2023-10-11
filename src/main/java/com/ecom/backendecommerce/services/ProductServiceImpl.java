@@ -27,11 +27,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product getById(Long pid) throws NoProductExistInRepository {
+    public Product getByID(Long pid) throws NoProductExistInRepository {
         Optional<Product> product = productRepository.findById(pid);
-        if(product.isEmpty()){
+        if (product.isEmpty()){
             throw new NoProductExistInRepository();
-        }else{
+        } else {
             return product.get();
         }
     }
