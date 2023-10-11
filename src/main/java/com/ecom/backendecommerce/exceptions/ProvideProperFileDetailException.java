@@ -1,4 +1,4 @@
 package com.ecom.backendecommerce.exceptions;
 
-public class ProvideProperFileDetailException {
+public class ProvideProperFileDetailException extends Exception {
 }

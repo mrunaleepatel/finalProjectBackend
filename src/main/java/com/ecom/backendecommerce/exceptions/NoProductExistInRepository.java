@@ -1,4 +1,4 @@
 package com.ecom.backendecommerce.exceptions;
 
-public class NoProductExistInRepository {
+public class NoProductExistInRepository extends Throwable {
 }
