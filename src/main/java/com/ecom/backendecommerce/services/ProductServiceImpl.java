@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProductServiceImpl implements ProductService {
+public class ProductServiceImpl implements ProductService{
 
     @Autowired
     private ProductRepository productRepository;
@@ -27,11 +27,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product getByID(Long pid) throws NoProductExistInRepository {
+    public Product getById(Long pid) throws NoProductExistInRepository {
         Optional<Product> product = productRepository.findById(pid);
-        if (product.isEmpty()){
+        if(product.isEmpty()){
             throw new NoProductExistInRepository();
-        } else {
+        }else{
             return product.get();
         }
     }
@@ -40,5 +40,6 @@ public class ProductServiceImpl implements ProductService {
     public Product add1(Product product) {
         return productRepository.save(product);
     }
+
 
 }

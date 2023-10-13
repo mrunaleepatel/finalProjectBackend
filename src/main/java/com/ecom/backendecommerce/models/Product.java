@@ -32,51 +32,67 @@ public class Product {
         this.pcoin = pcoin;
         this.image = image;
     }
+
     public Long getPid() {
         return pid;
     }
+
     public void setPid(Long pid) {
         this.pid = pid;
     }
+
     public String getPname() {
         return pname;
     }
+
     public void setPname(String pname) {
         this.pname = pname;
     }
+
     public String getPcategory() {
         return pcategory;
     }
+
     public void setPcategory(String pcategory) {
         this.pcategory = pcategory;
     }
+
     public Date getPdatepost() {
         return pdatepost;
     }
+
     public void setPdatepost(Date pdatepost) {
         this.pdatepost = pdatepost;
     }
+
     public String getDescription() {
         return description;
     }
+
     public void setDescription(String description) {
         this.description = description;
     }
+
     public String getPcity() {
         return pcity;
     }
+
     public void setPcity(String pcity) {
         this.pcity = pcity;
     }
+
     public double getPcoin() {
         return pcoin;
     }
+
     public void setPcoin(double pcoin) {
         this.pcoin = pcoin;
     }
+
     public String getImage() {
         return image;
     }
+
     public void setImage(String image) {
         this.image = image;
     }
