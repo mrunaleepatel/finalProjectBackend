@@ -31,7 +31,6 @@ public class ProductController {
         }
     }
 
-
     @PostMapping("/add")
     public ResponseEntity<Product> add1(@RequestBody Product product)  throws IOException {
         Product user=productService.add1(product);
@@ -44,6 +43,16 @@ public class ProductController {
             return new ResponseEntity<>(productService.getById(pid), HttpStatus.OK);
         }catch (NoProductExistInRepository e) {
             return new ResponseEntity("Product not found", HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @DeleteMapping("/delete/{pid}")
+    public ResponseEntity<String> deleteProduct(@PathVariable Long pid) {
+        try {
+            productService.deleteProduct(pid);
+            return new ResponseEntity<>("Product deleted successfully", HttpStatus.OK);
+        } catch (NoProductExistInRepository e) {
+            return new ResponseEntity<>("Product not found", HttpStatus.NOT_FOUND);
         }
     }
 }
