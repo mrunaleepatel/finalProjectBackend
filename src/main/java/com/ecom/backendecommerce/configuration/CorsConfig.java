@@ -8,8 +8,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/")
-                .allowedOrigins("http://localhost:4200") // Replace with the origin of your Angular app
+        registry.addMapping("/api/**")
+                .allowedOrigins("https://652edd312260c35e5ff1ebda--dazzling-caramel-a8189f.netlify.app/") // Replace with the origin of your Angular app
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowCredentials(true);
     }
