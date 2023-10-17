@@ -51,5 +51,16 @@ public class ProductServiceImpl implements ProductService{
         }
     }
 
+    @Override
+    public Product updateProduct(Long pid, Product product) throws NoProductExistInRepository {
+        Optional<Product> product1 = productRepository.findById(pid);
+        if(product1.isEmpty()){
+            throw new NoProductExistInRepository();
+        }else{
+            product.setPid(pid);
+            return productRepository.save(product);
+        }
+    }
+
 
 }
