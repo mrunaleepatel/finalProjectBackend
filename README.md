@@ -7,7 +7,7 @@ BudgetBazaar is an online e-commerce platform that specializes in offering a wid
 - Java
 - Spring Boot
 - Spring Data JPA
-- MySQL Workbench
+- Postgresql
 - Maven
 - Spring Web
 
