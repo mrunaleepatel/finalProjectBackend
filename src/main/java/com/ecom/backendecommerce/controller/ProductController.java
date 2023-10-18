@@ -22,6 +22,12 @@ public class ProductController {
         return "Working...!";
     }
 
+    @GetMapping("/about")
+    public ResponseEntity<String> getAboutPageContent() {
+        String aboutContent = "Welcome to our About page. We are a team of passionate developers...";
+        return ResponseEntity.ok(aboutContent);
+    }
+
     @GetMapping("/all")
     public ResponseEntity getAll(){
         try{
