@@ -17,7 +17,7 @@ public class Product {
     private String pcity;
     private double pcoin;
 
-    @Column(columnDefinition = "MEDIUMTEXT")
+    @Column(columnDefinition = "TEXT")
     private String image;
 
     public Product() {
