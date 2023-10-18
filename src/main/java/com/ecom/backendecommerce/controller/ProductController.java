@@ -61,4 +61,14 @@ public class ProductController {
             return new ResponseEntity<>("Product not found", HttpStatus.NOT_FOUND);
         }
     }
+
+    @PutMapping("/update/{pid}")
+    public ResponseEntity<?> updateProduct(@PathVariable Long pid, @RequestBody Product updatedProduct) {
+        try {
+            Product updated = productService.updateProduct(pid, updatedProduct);
+            return new ResponseEntity<>(updated, HttpStatus.OK);
+        } catch (NoProductExistInRepository e) {
+            return new ResponseEntity<>("Product not found", HttpStatus.NOT_FOUND);
+        }
+    }
 }
